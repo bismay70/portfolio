@@ -15,7 +15,7 @@ const Footer = () => {
   useEffect(() => {
     setIsVisible(true);
     
-    // Stagger animations
+   
     setTimeout(() => setVisibleSections(prev => ({ ...prev, profile: true })), 100);
     setTimeout(() => setVisibleSections(prev => ({ ...prev, contact: true })), 1100);
     setTimeout(() => setVisibleSections(prev => ({ ...prev, form: true })), 2100);
@@ -46,7 +46,7 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+   
     console.log('Form submitted');
   };
 
@@ -59,7 +59,7 @@ const Footer = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
-          {/* Profile Section */}
+       
           <div className={`space-y-6 text-center md:text-left transition-all duration-1000 ${visibleSections.profile ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <img 
               src="/bismay.jpg" 
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Phone & Email Section */}
+         
           <div className={`space-y-4 transition-all duration-1000 ${visibleSections.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h4 className="text-xl font-semibold text-blue-400 mb-4">Contact Info</h4>
             <div className="space-y-3 text-blue-200">
@@ -108,7 +108,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Form Section */}
+         
           <div className={`transition-all duration-1000 ${visibleSections.form ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {!showContact ? (
               <div className="space-y-4">
@@ -170,7 +170,7 @@ const Footer = () => {
             )}
           </div>
 
-          {/* Quick Links with Emojis */}
+        
           <div className={`transition-all duration-1000 ${visibleSections.links ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h4 className="text-xl font-semibold text-blue-400 mb-4">Quick Links</h4>
             <nav className="space-y-3">
@@ -206,10 +206,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
+       
         <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mb-8"></div>
 
-        {/* Bottom Section */}
+     
         <div className={`flex flex-col md:flex-row justify-between items-center gap-4 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="flex items-center gap-2 text-blue-300 text-sm">
             <span>© 2025 Bismay. Made with</span>
@@ -225,7 +225,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
+    
       <button
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-500 rounded-full shadow-lg transition-all hover:scale-110 group z-50"

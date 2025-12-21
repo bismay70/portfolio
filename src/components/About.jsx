@@ -14,7 +14,7 @@ const About = () => {
 
     window.addEventListener('mousemove', handleMouseMove);
 
-    // Load Shantell Sans font
+   
     const link = document.createElement('link');
     link.href = 'https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700;800&display=swap';
     link.rel = 'stylesheet';
@@ -44,30 +44,30 @@ const About = () => {
       description: 'A comprehensive Pokemon gameverse consisting classic Hangman and PokeCrush, interactive features, and modern UI design.',
       techStack: ['React', 'JavaScript', 'TailwindCSS', 'Pokemon API'],
       url: 'https://pokiverse.vercel.app/',
-      image: 'https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=800&q=80'
+      image: './public/pokiverse.png'
     },
     {
       name: 'Dictionary App',
       description: 'An elegant dictionary application with word definitions, pronunciations, and examples from multiple sources.',
       techStack: ['JavaScript', 'CSS', 'Dictionary API'],
       url: 'https://dictionary-app-sigma-ecru.vercel.app/',
-      image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80'
+      image: './public/dictionary.png'
     },
     {
       name: 'Weather App',
       description: 'An elegant dictionary application with word definitions, pronunciations, and examples from multiple sources.',
       techStack: ['JavaScript', 'CSS', 'weather API'],
       url: 'https://mausam-liard.vercel.app/',
-      image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80'
+      image: './public/weather.png'
     }
   ];
 
-  // Duplicate tech stacks for infinite scroll
+ 
   const duplicatedTechs = [...techStacks, ...techStacks, ...techStacks];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6 overflow-hidden relative" style={{ fontFamily: "'Shantell Sans', cursive" }}>
-      {/* Background Gradients */}
+     
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900/40 to-blue-950/60"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(30,58,138,0.15),transparent_50%)]"></div>
@@ -92,16 +92,16 @@ const About = () => {
       `}</style>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* About Me Title */}
+       
         <section className={`text-center mb-12 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
             About Me
           </h1>
         </section>
 
-        {/* Profile and Description Side by Side */}
+      
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Left - Description Paragraph */}
+         
           <section className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 flex items-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             <div>
               <p className="text-lg text-blue-100 leading-relaxed">
@@ -110,70 +110,61 @@ const About = () => {
             </div>
           </section>
 
-          {/* Right - Profile Photos with Diamond Shapes */}
-          <section className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-            <div className="flex flex-col items-center justify-center h-full">
-              {/* Diamond Shaped Photos Grid */}
-              <div className="relative w-full max-w-md h-80 mb-6">
-                {/* Large Diamond - Bottom Left */}
-                <div className="absolute bottom-0 left-0 w-48 h-48 overflow-hidden shadow-2xl group hover:scale-110 transition-transform duration-300" style={{ transform: 'rotate(45deg)' }}>
-                  <div className="w-full h-full scale-150" style={{ transform: 'rotate(-45deg)' }}>
-                    <img 
-                      src="./public/me.jpeg"
-                      alt="Bismay 1"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
-                </div>
+        
+        <section
+  className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 ${
+    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+  }`}
+  style={{ animationDelay: '0.3s' }}
+>
+  <div className="flex items-center justify-center h-full">
+    <div className="relative w-72 h-72">
 
-                {/* Medium Diamond - Center */}
-                <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-40 h-40 overflow-hidden shadow-2xl group hover:scale-110 transition-transform duration-300 z-10" style={{ transform: 'rotate(43deg) translateX(-50%)' }}>
-                  <div className="w-full h-full scale-150" style={{ transform: 'rotate(-43deg)' }}>
-                    <img 
-                      src="./public/bismay.jpg"
-                      alt="Bismay 2"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-transparent"></div>
-                </div>
-              
+    
+      <div
+        className="absolute top-50 left-60 w-44 h-44 overflow-hidden shadow-2xl group transition-transform duration-300"
+        style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }}
+      >
+        <div
+          className="w-full h-full scale-150"
+          style={{ transform: 'rotate(-45deg)' }}
+        >
+          <img
+            src="./public/me.jpeg"
+            alt="Back Diamond"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
+      </div>
 
-                {/* Small Diamond - Top Right */}
-                {/* <div className="absolute top-0 right-8 w-24 h-24 overflow-hidden shadow-2xl group hover:scale-110 transition-transform duration-300" style={{ transform: 'rotate(45deg)' }}>
-                  <div className="w-full h-full scale-150" style={{ transform: 'rotate(-45deg)' }}>
-                    <img 
-                      src="./public/bismay.jpg"
-                      alt="Bismay 3"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-transparent"></div>
-                </div> */}
+     
+      <div
+        className="absolute top-30 left-10 w-44 h-44 overflow-hidden shadow-2xl group z-20 transition-transform duration-300 hover:scale-105"
+        style={{ transform: 'translate(-40%, -40%) rotate(45deg)' }}
+      >
+        <div
+          className="w-full h-full scale-150"
+          style={{ transform: 'rotate(-45deg)' }}
+        >
+          <img
+            src="./public/bismay.jpg"
+            alt="Front Diamond"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-transparent"></div>
+      </div>
 
-                {/* Bottom Right Diamond */}
-                {/* <div className="absolute bottom-4 right-0 w-32 h-32 overflow-hidden shadow-2xl group hover:scale-110 transition-transform duration-300" style={{ transform: 'rotate(39deg)' }}>
-                  <div className="w-full h-full scale-150" style={{ transform: 'rotate(-39deg)' }}>
-                    <img 
-                      src="./public/me.jpeg"
-                      alt="Bismay 4"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent"></div>
-                </div> */}
-              </div>
-            </div>
-          </section>
+    </div>
+  </div>
+</section>
         </div>
 
-        {/* Tech Stack - Full Width Infinite Carousel */}
+       
         <section className={`mb-8 bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-3xl p-6 transition-all duration-500 transform shadow-2xl hover:shadow-indigo-500/20 overflow-hidden ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
           <div className="flex items-center mb-6">
-            <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl mr-4">
-              <Code className="w-6 h-6 text-white" />
-            </div>
+           
             <h2 className="text-2xl font-bold text-white">Tech Stack</h2>
           </div>
           
@@ -198,12 +189,10 @@ const About = () => {
           </div>
         </section>
 
-        {/* Projects - Full Width */}
+       
         <section id="projects" className={`relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.5s' }}>
           <div className="flex items-center mb-6">
-            <div className="p-3 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl mr-4">
-              <Trophy className="w-6 h-6 text-white" />
-            </div>
+           
             <h2 className="text-2xl font-bold text-white">Featured Projects</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -212,7 +201,7 @@ const About = () => {
                 key={project.name}
                 className="relative rounded-2xl overflow-hidden transition-all duration-300 bg-gradient-to-br from-slate-800/50 to-blue-900/50 p-5 group hover:scale-[1.02]"
               >
-                {/* Project Screenshot */}
+               
                 <div className="mb-4">
                   <div className="rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300">
                     <img
@@ -223,7 +212,6 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* Project Details */}
                 <div className="flex flex-col">
                   <h3 className="text-xl font-bold text-blue-200 mb-2">
                     {project.name}

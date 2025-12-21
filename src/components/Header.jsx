@@ -16,7 +16,9 @@ const toggleMenu = () => {
   const closeContactForm = () => setContactFormOpen(false);
 
   return (
-   <header className='absolute w-full z-50 transition-all duration-300'>
+   <header className='absolute w-full z-50 transition-all duration-300' style={{ fontFamily: "'Shantell Sans', cursive" }}>
+        <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        
         <div className='container mx:auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20'>
             <motion.div 
             initial={{ opacity: 0, x: -100 }}
@@ -163,14 +165,14 @@ const toggleMenu = () => {
                                     <FiX className='h-6 w-6 text-gray-300 font-extrabold' />
                                 </button>
                         </div>
-                        <form className='space-y-4'>
+                        <div className='space-y-4'>
                             <div>
                                 <label htmlFor="name" className='block text-sm font-medium text-gray-300 mb-1'>Name</label>
                                  <input 
                             type='text' 
                             placeholder='Your Name' 
                             id='name'
-                            className='w-full px-4 py-2 rounded-lg bg-gray-600 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-600 ' 
+                            className='w-full px-4 py-2 rounded-lg bg-gray-600 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-600 outline-none text-white' 
                             />
                             </div>
                             <div>
@@ -179,17 +181,17 @@ const toggleMenu = () => {
                             type='email' 
                             placeholder='Your Email' 
                             id='email'
-                            className='w-full px-4 py-2 rounded-lg bg-gray-600 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-600 ' 
+                            className='w-full px-4 py-2 rounded-lg bg-gray-600 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-600 outline-none text-white' 
                             />
                             </div>
                             <div>
                                 <label htmlFor="message" className='block text-sm font-medium text-gray-300 mb-1'>Message</label>
                              <textarea 
-                            rows='4'    
+                            rows={4}    
                            
                             placeholder='How can I help you?' 
                             id='message'
-                            className='w-full px-4 py-2 rounded-lg bg-gray-600 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-600 ' 
+                            className='w-full px-4 py-2 rounded-lg bg-gray-600 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-600 outline-none text-white resize-none' 
                             />
                           
                             </div>
@@ -197,11 +199,16 @@ const toggleMenu = () => {
                              <motion.button 
                              whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                             type='submit' className='w-full px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 text-white font-bold hover:from-blue-700 hover:to-blue-700 transition-all duration-300'>
+                             type='button' 
+                             onClick={(e) => {
+                               e.preventDefault();
+                               console.log('Form submitted');
+                             }}
+                             className='w-full px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 text-white font-bold hover:from-blue-700 hover:to-blue-700 transition-all duration-300'>
                                 Send Message
                              </motion.button>
                             
-                        </form>
+                        </div>
                     </motion.div>
                 </motion.div>
             )}

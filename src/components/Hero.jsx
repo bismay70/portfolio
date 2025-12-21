@@ -21,7 +21,9 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className='h-screen bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 flex xl:flex-row flex-col-reverse items-center justify-between lg:px-24 px-10 relative overflow-hidden'>
+    <section className='h-screen bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 flex xl:flex-row flex-col-reverse items-center justify-between lg:px-24 px-10 relative overflow-hidden' style={{ fontFamily: "'Shantell Sans', cursive" }}>
+        <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        
         <div className='z-40 xl:mb-0 mb-[20%]'>
             <motion.h1
             initial={{ y: 80, opacity: 0 }}
@@ -33,8 +35,7 @@ const Hero = () => {
                 stiffness: 40, 
                 damping: 25,
                 }}
-                className='text-5xl md:text-7xl lg:text-8xl font-bold z-10 mb-6'
-                style={{ fontFamily: 'Shantell Sans, cursive' }}>
+                className='text-5xl md:text-7xl lg:text-8xl font-bold z-10 mb-6'>
                 Hello, I'm <br/> 
                 <span className='text-green-700'>{displayedText}</span>
                 <span className='animate-pulse'>|</span>
