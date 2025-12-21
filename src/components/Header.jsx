@@ -30,11 +30,11 @@ const toggleMenu = () => {
 
             }}
             className='flex items-center'>
-                <div className='h-15 w-15 rounded-xl bg-gradient-to-r from-gray-500 to-gray-100 flex items-center justify-center text-blue-700 font-bold text-xl mr-3'>
+                <div className='h-15 w-15 rounded-xl bg-gradient-to-r from-blue-800 to-blue-900 hover:from-blue-700 hover:to-blue-800 flex items-center justify-center text-blue-700 font-bold text-xl mr-3'>
                     B
                 </div>
                 <span className='text-xl font-bold bg-gradient-to-r from-gray-300 to-gray-100 bg-clip-text text-transparent'>
-                    Bsamay
+                    bsamay
                 </span>
             </motion.div>
 
@@ -92,7 +92,7 @@ const toggleMenu = () => {
                     delay: 1.6,
                     duration: 0.8,
                 }}
-                className='ml-4 px-8 py-2 rounded-xl bg-gradient-to-r from-gray-400 to-gray-100 bg-blue-600 text-blue font-bold hover:from-blue-700 hover:to-blue-700 hover:text-white transition-all duration-500 '>
+                className='ml-4 px-8 py-2 rounded-xl bg-gradient-to-r from-blue-400 to-blue-500 bg-blue-600 text-blue font-bold hover:from-blue-700 hover:to-blue-700 hover:text-white transition-all duration-500 '>
                     Contact
                 </motion.button>
                 </div>
