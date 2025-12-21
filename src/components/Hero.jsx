@@ -21,7 +21,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className='h-screen bg-gradient-to-b from-blue-600 to-black flex xl:flex-row flex-col-reverse items-center justify-between lg:px-24 px-10 relative overflow-hidden'>
+    <section className='h-screen bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 flex xl:flex-row flex-col-reverse items-center justify-between lg:px-24 px-10 relative overflow-hidden'>
         <div className='z-40 xl:mb-0 mb-[20%]'>
             <motion.h1
             initial={{ y: 80, opacity: 0 }}

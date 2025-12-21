@@ -30,10 +30,10 @@ const toggleMenu = () => {
 
             }}
             className='flex items-center'>
-                <div className='h-15 w-15 rounded-xl bg-gradient-to-r from-blue-800 to-blue-900 hover:from-blue-700 hover:to-blue-800 flex items-center justify-center text-blue-700 font-bold text-xl mr-3'>
+                <div className=' flex items-center justify-center text-blue-700 font-bold text-2xl mr-3'>
                     B
                 </div>
-                <span className='text-xl font-bold bg-gradient-to-r from-gray-300 to-gray-100 bg-clip-text text-transparent'>
+                <span className='text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent'>
                     bsamay
                 </span>
             </motion.div>
@@ -53,7 +53,7 @@ const toggleMenu = () => {
                     className='relative text-gray-800 dark:text-gray-200 hover:blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 group'
                     href={`#${item.toLowerCase()}`}>
                         {item}
-                        <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group hover:w-full transition-all duration-300'></span>
+                        <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-200 group hover:w-full transition-all duration-300'></span>
                     </motion.a>
                 ))}
             </nav>
