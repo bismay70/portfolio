@@ -59,6 +59,20 @@ const About = () => {
       techStack: ['JavaScript', 'CSS', 'weather API'],
       url: 'https://mausam-liard.vercel.app/',
       image: './public/weather.png'
+    },
+    {
+      name: 'ML4E Official Website',
+      description: 'The official website for ML4E, a student-run Machine Learning Club at NIT Rourkela, showcasing projects, events, and resources.',
+      techStack: ['TypeScript', 'Next.js', 'TailwindCSS', 'Framer Motion', 'Three.js'],
+      url: 'https://ml-4-e-web1.vercel.app/',
+      image: './public/ml4e.png'
+    },
+    {
+      name: 'Weather App',
+      description: 'An elegant dictionary application with word definitions, pronunciations, and examples from multiple sources.',
+      techStack: ['JavaScript', 'CSS', 'weather API'],
+      url: 'https://mausam-liard.vercel.app/',
+      image: './public/weather.png'
     }
   ];
 
