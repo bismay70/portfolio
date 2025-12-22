@@ -44,35 +44,35 @@ const About = () => {
       description: 'A comprehensive Pokemon gameverse consisting classic Hangman and PokeCrush, interactive features, and modern UI design.',
       techStack: ['React', 'JavaScript', 'TailwindCSS', 'Pokemon API'],
       url: 'https://pokiverse.vercel.app/',
-      image: './public/pokiverse.png'
+      image: '/pokiverse.png'
     },
     {
       name: 'Dictionary App',
       description: 'An elegant dictionary application with word definitions, pronunciations, and examples from multiple sources.',
       techStack: ['JavaScript', 'CSS', 'Dictionary API'],
       url: 'https://dictionary-app-sigma-ecru.vercel.app/',
-      image: './public/dictionary.png'
+      image: '/dictionary.png'
     },
     {
       name: 'Weather App',
       description: 'An elegant dictionary application with word definitions, pronunciations, and examples from multiple sources.',
       techStack: ['JavaScript', 'CSS', 'weather API'],
       url: 'https://mausam-liard.vercel.app/',
-      image: './public/weather.png'
+      image: '/weather.png'
     },
     {
       name: 'ML4E Official Website',
       description: 'The official website for ML4E, a student-run Machine Learning Club at NIT Rourkela, showcasing projects, events, and resources.',
       techStack: ['TypeScript', 'Next.js', 'TailwindCSS', 'Framer Motion', 'Three.js'],
       url: 'https://ml-4-e-web1.vercel.app/',
-      image: './public/ml4e.png'
+      image: '/ml4e.png'
     },
     {
       name: 'Weather App',
       description: 'An elegant dictionary application with word definitions, pronunciations, and examples from multiple sources.',
       techStack: ['JavaScript', 'CSS', 'weather API'],
       url: 'https://mausam-liard.vercel.app/',
-      image: './public/weather.png'
+      image: '/weather.png'
     }
   ];
 
@@ -144,7 +144,7 @@ const About = () => {
           style={{ transform: 'rotate(-45deg)' }}
         >
           <img
-            src="./public/me.jpeg"
+            src="/me.jpeg"
             alt="Back Diamond"
             className="w-full h-full object-cover"
           />
@@ -162,7 +162,7 @@ const About = () => {
           style={{ transform: 'rotate(-45deg)' }}
         >
           <img
-            src="./public/bismay.jpg"
+            src="/bismay.jpg"
             alt="Front Diamond"
             className="w-full h-full object-cover"
           />
