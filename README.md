@@ -2,7 +2,7 @@
 
 A modern, interactive portfolio website built with React and enhanced with 3D elements using Spline.
 
-<img src="">
+<img src="./public/portfolio.png" width="1000px">
 
 ## 🚀 Tech Stack
 
