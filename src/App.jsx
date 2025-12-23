@@ -1,23 +1,32 @@
-import { useState } from "react"
-import Footer from "./components/Footer"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Journey from "./components/Journey"
 
 function App() {
-  const [showJourney, setShowJourney] = useState(false)
-
   return (
-    <>
-      <Header onEducationClick={() => setShowJourney(true)} />
-      <Hero />
+    <BrowserRouter>
+      <Header />
 
-      {showJourney && <Journey />}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <About />
+            </>
+          }
+        />
 
-      <About />
+        <Route path="/journey" element={<Journey />} />
+      </Routes>
+
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

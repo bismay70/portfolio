@@ -6,7 +6,7 @@ export default function Journey() {
     {
       title: "National Institute Of Technology, Rourkela",
       details: ["B.Tech in Computer Science & Engineering", "(2024 - Present)"],
-      grade: ["CGPA - 8.48"],
+      grade: ["CGPA - 8.44"],
       image: "https://imgs.search.brave.com/cU7E3iUfIhl16OrufTXkljRL7B8scYUL81cyidgCZ7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGltZXNub3du/ZXdzLmNvbS90aHVt/Yi9tc2lkLTkyNTM5/NzM1LHRodW1ic2l6/ZS04MjY1OTYsd2lk/dGgtMTI4MCxoZWln/aHQtNzIwLHJlc2l6/ZW1vZGUtNzUvOTI1/Mzk3MzUuanBn",
     },
     {
