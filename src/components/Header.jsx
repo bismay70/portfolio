@@ -4,7 +4,7 @@ import { FiGithub, FiLinkedin, FiMenu, FiX } from 'react-icons/fi'
 import { useState } from 'react'
 
 
-function Header() {
+function Header({ onEducationClick }) {
 
 const [isOpen, setIsOpen] = useState(false);
 const toggleMenu = () => {
@@ -40,25 +40,30 @@ const toggleMenu = () => {
                 </span>
             </motion.div>
 
-            <nav className='lg:flex hidden space-x-8 '>
-                {['Home', 'About', 'Portfolio','Projects','Education'].map((item, index) => (
-                    <motion.a 
-                    key={index}
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}  
-                    transition={{
-                        type: 'spring',
-                        stiffness: 100, 
-                        damping: 20,
-                        delay:0.7 + index * 0.2,
-                    }}
-                    className='relative text-gray-800 dark:text-gray-200 hover:blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 group'
-                    href={`#${item.toLowerCase()}`}>
-                        {item}
-                        <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-200 group hover:w-full transition-all duration-300'></span>
-                    </motion.a>
-                ))}
-            </nav>
+           <nav className="lg:flex hidden space-x-8">
+  {['Home', 'About', 'Portfolio', 'Projects', 'Education'].map((item, index) => (
+    <motion.a
+      key={index}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: 'spring',
+        stiffness: 100,
+        damping: 20,
+        delay: 0.7 + index * 0.2,
+      }}
+      onClick={() => {
+        if (item === 'Education') onEducationClick()
+      }}
+      href={item === 'Education' ? undefined : `#${item.toLowerCase()}`}
+      className="relative cursor-pointer text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 group"
+    >
+      {item}
+      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-200 group-hover:w-full transition-all duration-300"></span>
+    </motion.a>
+  ))}
+</nav>
+
 
                 <div className='md:flex hidden items-center space-x-4'>
                     <motion.a
@@ -115,15 +120,22 @@ const toggleMenu = () => {
                 animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
                 transition={{duration: 0.5}}
               className="md:hidden overflow-hodden bg-white dark:bg-gray-800 shadow-lg px-4 py-5 space-y-5">
-             <nav className="flex flex-col space-y-3">
-                {["Home", "About", "Portfolio","Projects", "Education"].map((item) => (
-                  <a onClick={toggleMenu} className="text-gray-300 font-medium py-2"
-                    href={`#${item.toLowerCase()}`}
-                    key={item}>
-                    {item}
-                    </a>
-                ))}
-             </nav>
+          <nav className="flex flex-col space-y-3">
+  {["Home", "About", "Portfolio", "Projects", "Education"].map((item) => (
+    <a
+      key={item}
+      onClick={() => {
+        toggleMenu()
+        if (item === "Education") onEducationClick()
+      }}
+      href={item === "Education" ? undefined : `#${item.toLowerCase()}`}
+      className="text-gray-300 font-medium py-2 cursor-pointer"
+    >
+      {item}
+    </a>
+  ))}
+</nav>
+
 
                 <div className='pt-4 border-t border-gray-200'>
                     <div className='flex space-x-5'>
