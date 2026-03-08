@@ -47,25 +47,25 @@ const About = () => {
       image: '/pokiverse.png'
     },
      {
-      name: 'Weather App',
+      name: 'Campus Complaint Portal',
       description: 'A modern, production-ready web application for managing campus complaints and maintenance requests. Enables students to submit, track, and filter issues with real-time updates and image uploads.  Features role-based access and an admin dashboard for streamlined complaint management.',
       techStack: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Firebase Auth', 'TailwindCSS', 'shadcn/ui', 'UploadThing', 'Recharts', 'react-hook-form', 'Zod']
       url: 'https://campus-complaint-portal-q8q7.vercel.app/',
       image: '/Screenshot 2026-03-08 233632.png'
     },
-   {
+    {
       name: 'ML4E Official Website',
       description: 'The official website for ML4E, a student-run Machine Learning Club at NIT Rourkela, showcasing projects, events, and resources.',
       techStack: ['TypeScript', 'Next.js', 'TailwindCSS', 'Framer Motion', 'Three.js'],
       url: 'https://ml-4-e-web1.vercel.app/',
       image: '/ml4e.png'
     },
-{
-      name: 'Weather App',
-      description: 'An elegant dictionary application with word definitions, pronunciations, and examples from multiple sources.',
-      techStack: ['JavaScript', 'CSS', 'weather API'],
-      url: 'https://mausam-liard.vercel.app/',
-      image: '/weather.png'
+    {
+       name: 'Weather App',
+       description: 'A sleek web application that provides real-time weather updates, forecasts, and atmospheric details for any location worldwide.',
+       techStack: ['JavaScript', 'CSS', 'weather API'],
+       url: 'https://mausam-liard.vercel.app/',
+       image: '/weather.png'
     }
     {
       name: 'Dictionary App',
