@@ -51,7 +51,7 @@ const About = () => {
       description: 'A modern, production-ready web application for managing campus complaints and maintenance requests. Enables students to submit, track, and filter issues with real-time updates and image uploads.  Features role-based access and an admin dashboard for streamlined complaint management.',
       techStack: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Firebase Auth', 'TailwindCSS', 'shadcn/ui', 'UploadThing', 'Recharts', 'react-hook-form', 'Zod']
       url: 'https://campus-complaint-portal-q8q7.vercel.app/',
-      image: '/weather.png'
+      image: '/Screenshot 2026-03-08 233632.png'
     },
    {
       name: 'ML4E Official Website',
