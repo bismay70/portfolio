@@ -35,21 +35,48 @@ const About = () => {
     { name: 'Next.js', icon: 'https://imgs.search.brave.com/P77vz8f_CSDPRp_02Y9kyUC1lz8r_FePsp7pa7fY7AU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdo/ZHByby5jb20vd3At/Y29udGVudC90aGVt/ZXMvcG5naGRwcm8v/ZG93bmxvYWQvc29j/aWFsLW1lZGlhLWFu/ZC1icmFuZHMvbmV4/dC1qcy1sb2dvLWlj/b24ucG5n', color: 'bg-gray-500/20 hover:bg-gray-500/40 border-gray-500/30', url: 'https://nextjs.org/docs' },
     { name: 'Express', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png', color: 'bg-neutral-500/20 hover:bg-neutral-500/40 border-neutral-500/30', url: 'https://expressjs.com/' },
     { name: 'Node.js', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg', color: 'bg-green-600/20 hover:bg-green-600/40 border-green-600/30', url: 'https://nodejs.org/en/docs/' },
-    { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg', color: 'bg-pink-500/20 hover:bg-pink-500/40 border-pink-500/30', url: 'https://www.figma.com/' }
+    { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg', color: 'bg-pink-500/20 hover:bg-pink-500/40 border-pink-500/30', url: 'https://www.figma.com/' },
+    { 
+  name: 'TypeScript',
+  icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
+  color: 'bg-blue-600/20 hover:bg-blue-600/40 border-blue-600/30',
+  url: 'https://www.typescriptlang.org/docs/'
+},
+
+{ 
+  name: 'MongoDB',
+  icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg',
+  color: 'bg-green-500/20 hover:bg-green-500/40 border-green-500/30',
+  url: 'https://www.mongodb.com/docs/'
+},
+
+{ 
+  name: 'Firebase',
+  icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg',
+  color: 'bg-yellow-500/20 hover:bg-yellow-500/40 border-yellow-500/30',
+  url: 'https://firebase.google.com/docs'
+},
+
+{ 
+  name: 'Solidity',
+  icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg',
+  color: 'bg-gray-600/20 hover:bg-gray-600/40 border-gray-600/30',
+  url: 'https://docs.soliditylang.org/'
+}
   ];
 
   const projects = [
     {
       name: 'Pokiverse',
-      description: 'A comprehensive Pokemon gameverse consisting classic Hangman and PokeCrush, interactive features, and modern UI design.',
-      techStack: ['React', 'JavaScript', 'TailwindCSS', 'Pokemon API'],
+  description: 'A Pokémon-themed mini-game hub featuring PokeLudo, PokeCrush, Hangman, and Memorite with modular React architecture, smooth animations, and dynamic Pokémon data integration.',
+  techStack: ['React.js', 'Vite', 'TailwindCSS', 'react-router-dom', 'GSAP', 'Lucide React', 'PokéAPI'],
       url: 'https://pokiverse.vercel.app/',
       image: '/pokiverse.png'
     },
      {
       name: 'Campus Complaint Portal',
       description: 'A modern, production-ready web application for managing campus complaints and maintenance requests. Enables students to submit, track, and filter issues with real-time updates and image uploads.  Features role-based access and an admin dashboard for streamlined complaint management.',
-      techStack: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Firebase Auth', 'TailwindCSS', 'shadcn/ui', 'UploadThing', 'Recharts', 'react-hook-form', 'Zod']
+      techStack: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Firebase Auth', 'TailwindCSS', 'shadcn/ui', 'UploadThing', 'Recharts', 'react-hook-form', 'Zod'],
       url: 'https://campus-complaint-portal-q8q7.vercel.app/',
       image: '/Screenshot 2026-03-08 233632.png'
     },
@@ -66,7 +93,7 @@ const About = () => {
        techStack: ['JavaScript', 'CSS', 'weather API'],
        url: 'https://mausam-liard.vercel.app/',
        image: '/weather.png'
-    }
+    },
     {
       name: 'Dictionary App',
       description: 'An elegant dictionary application with word definitions, pronunciations, and examples from multiple sources.',
@@ -80,13 +107,12 @@ const About = () => {
   const duplicatedTechs = [...techStacks, ...techStacks, ...techStacks];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6 overflow-hidden relative" style={{ fontFamily: "'Shantell Sans', cursive" }}>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6 lg:p-12 overflow-hidden relative" style={{ fontFamily: "'Shantell Sans', cursive" }}>
      
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900/40 to-blue-950/60"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(30,58,138,0.15),transparent_50%)]"></div>
-      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(209,255,102,0.15),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(163,255,204,0.15),transparent_50%)]"></div>
+      <div className="absolute top-20 left-20 w-72 h-72 bg-[#d1ff66]/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#cce0ff]/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       <style>{`
         @keyframes scroll {
@@ -94,31 +120,32 @@ const About = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-33.333%);
+            transform: translateX(calc(-100% / 3));
           }
         }
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 35s linear infinite;
+          width: max-content;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
         }
       `}</style>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-[1400px] mx-auto">
        
-        <section className={`text-center mb-12 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+        <section className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent tracking-tight">
             About Me
           </h1>
         </section>
 
       
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-center">
          
-          <section className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 flex items-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+          <section className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-[2.5rem] p-10 lg:p-14 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 flex items-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             <div>
-              <p className="text-lg text-blue-100 leading-relaxed">
+              <p className="text-lg text-blue-100 leading-relaxed font-medium">
                 I'm an aspiring Frontend Engineer and B.Tech student, graduating in 2028, currently exploring the dynamic world of full-stack web development. I've built a solid foundation in software development, data structures, and modern frontend technologies like React, Tailwind CSS, and GSAP. I'm actively expanding my skills through projects and problem-solving, with a strong interest in participating in hackathons and collaborative tech challenges. Eager to learn, build, and grow, I'm passionate about crafting intuitive and engaging user experiences while continuously exploring the ever-evolving web ecosystem.
               </p>
             </div>
@@ -126,7 +153,7 @@ const About = () => {
 
         
         <section
-  className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 ${
+  className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-[2.5rem] p-8 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 ${
     isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
   }`}
   style={{ animationDelay: '0.3s' }}
@@ -182,8 +209,14 @@ const About = () => {
             <h2 className="text-2xl font-bold text-white">Tech Stack</h2>
           </div>
           
-          <div className="relative overflow-hidden">
-            <div className="flex animate-scroll">
+          <div 
+            className="relative overflow-hidden"
+            style={{ 
+              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', 
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' 
+            }}
+          >
+            <div className="flex animate-scroll w-max">
               {duplicatedTechs.map((tech, index) => (
                 <a
                   key={`${tech.name}-${index}`}
