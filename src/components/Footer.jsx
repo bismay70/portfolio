@@ -29,7 +29,7 @@ const Footer = () => {
 
   const formatTime = (date) => {
     return date.toLocaleTimeString('en-US', { 
-      hour12: true, 
+      hour12: false, 
       timeZone: 'Asia/Kolkata',
       hour: '2-digit',
       minute: '2-digit'
@@ -51,8 +51,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white" style={{ fontFamily: "'Shantell Sans', cursive" }}>
-      <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <footer className="relative bg-[url('/bg.png')] bg-cover bg-center bg-fixed text-white" style={{ fontFamily: "'Young Serif', serif" }}>
+      <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-14">
@@ -67,7 +67,7 @@ const Footer = () => {
               className="w-32 h-32 rounded-full mx-auto md:mx-0 border-4 border-blue-500 shadow-lg object-cover"
             />
             <p className="text-blue-200 text-base leading-relaxed max-w-md mx-auto md:mx-0">
-              Frontend Developer passionate about creating beautiful, functional web experiences that make a difference.
+              Full Stack Developer passionate about creating beautiful, functional web experiences that make a difference.
             </p>
             <div className="flex justify-center md:justify-start gap-5 mt-4">
               <a 
@@ -91,19 +91,19 @@ const Footer = () => {
 
          
           <div className={`space-y-4 transition-all duration-1000 ${visibleSections.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h4 className="text-xl font-semibold text-blue-400 mb-4">Contact Info</h4>
-            <div className="space-y-3 text-blue-200">
+            <h4 className="text-xl font-semibold text-blue-100 mb-4">Contact Info</h4>
+            <div className="space-y-3 text-blue-300">
               <div className="flex items-center gap-3 hover:text-white transition">
-                <Mail size={18} className="text-blue-400" />
+                <Mail size={18} className="text-blue-300" />
                 <span>developer.com</span>
               </div>
               <div className="flex items-center gap-3 hover:text-white transition">
-                <MapPin size={18} className="text-blue-400" />
+                <MapPin size={18} className="text-blue-300" />
                 <span>Cuttack, Odisha, India</span>
               </div>
               <div className="flex items-center gap-3">
-                <Clock size={18} className="text-blue-400" />
-                <span>IST {formatTime(currentTime)}</span>
+                <Clock size={18} className="text-blue-300" />
+                <span>My local time - {formatTime(currentTime)} IST</span>
               </div>
             </div>
           </div>
@@ -112,13 +112,13 @@ const Footer = () => {
           <div className={`transition-all duration-1000 ${visibleSections.form ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {!showContact ? (
               <div className="space-y-4">
-                <h4 className="text-xl font-semibold text-blue-400 mb-4">Get in Touch</h4>
+                <h4 className="text-xl font-semibold text-blue-100 mb-4">Get in Touch</h4>
                 <p className="text-blue-200 text-sm mb-4">
                   Although I'm always open for any new opportunities. Have a question or want to say hi? 
                 </p>
                 <button 
                   onClick={() => setShowContact(true)}
-                  className="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg text-white font-bold hover:from-blue-700 hover:to-blue-700 transition-all duration-300 hover:scale-105"
+                  className="px-6 py-2 bg-[#2c6f99] rounded-lg text-white font-bold hover:bg-[#1f506e] transition-all duration-300 hover:scale-105"
                 >
                   Contact Me
                 </button>
@@ -161,7 +161,7 @@ const Footer = () => {
                   </div>
                   <button 
                     onClick={handleSubmit}
-                    className='w-full px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 text-white font-bold hover:from-blue-700 hover:to-blue-700 transition-all duration-300 hover:scale-105'
+                    className='w-full px-4 py-2 rounded-lg bg-[#2c6f99] text-white font-bold hover:bg-[#1f506e] transition-all duration-300 hover:scale-105'
                   >
                     Send Message
                   </button>
@@ -172,34 +172,34 @@ const Footer = () => {
 
         
           <div className={`transition-all duration-1000 ${visibleSections.links ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h4 className="text-xl font-semibold text-blue-400 mb-4">Quick Links</h4>
+            <h4 className="text-xl font-semibold text-blue-100 mb-4">Quick Links</h4>
             <nav className="space-y-3">
               <a 
                 href="#about"
                 className="flex items-center gap-2 text-blue-200 hover:text-white hover:underline transition-all group"
               >
-                <span className="group-hover:animate-bounce">😊</span>
+                <span className="group-hover:animate-bounce">🚀</span>
                 <span>About</span>
               </a>
               <a 
                 href="#projects"
                 className="flex items-center gap-2 text-blue-200 hover:text-white hover:underline transition-all group"
               >
-                <span className="group-hover:animate-bounce">💻</span>
+                <span className="group-hover:animate-bounce">⚡</span>
                 <span>Projects</span>
               </a>
               <a 
                 href="#skills"
                 className="flex items-center gap-2 text-blue-200 hover:text-white hover:underline transition-all group"
               >
-                <span className="group-hover:animate-bounce">🤔</span>
+                <span className="group-hover:animate-bounce">🛠️</span>
                 <span>Skills</span>
               </a>
               <a 
                 href="#contact"
                 className="flex items-center gap-2 text-blue-200 hover:text-white hover:underline transition-all group"
               >
-                <span className="group-hover:animate-bounce">📧</span>
+                <span className="group-hover:animate-bounce">📬</span>
                 <span>Contact</span>
               </a>
             </nav>
@@ -212,15 +212,12 @@ const Footer = () => {
      
         <div className={`flex flex-col md:flex-row justify-between items-center gap-4 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="flex items-center gap-2 text-blue-300 text-sm">
-            <span>© 2025 Bismay. Made with</span>
+            <span>Copyright © 2026 Bismay. Made with</span>
             <Heart size={16} className="text-red-400 animate-pulse" />
           </div>
           <div className="flex items-center gap-3">
             <span className="text-blue-300 text-sm">Available for freelance work</span>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-green-400 text-sm">Online</span>
-            </div>
+  
           </div>
         </div>
       </div>
@@ -228,7 +225,7 @@ const Footer = () => {
     
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-500 rounded-full shadow-lg transition-all hover:scale-110 group z-50"
+        className="fixed bottom-8 right-8 p-3 bg-[#2c6f99] hover:bg-[#1f506e] rounded-full shadow-lg transition-all hover:scale-110 group z-50"
       >
         <ArrowUp size={20} className="text-white group-hover:animate-bounce" />
       </button>

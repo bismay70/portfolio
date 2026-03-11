@@ -2,25 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Code, BookOpen, Trophy, Calendar, MapPin, User } from 'lucide-react';
 
 const About = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-   
-    const link = document.createElement('link');
-    link.href = 'https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700;800&display=swap';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
-
-    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   const techStacks = [
@@ -78,7 +63,7 @@ const About = () => {
       description: 'A modern, production-ready web application for managing campus complaints and maintenance requests. Enables students to submit, track, and filter issues with real-time updates and image uploads.  Features role-based access and an admin dashboard for streamlined complaint management.',
       techStack: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Firebase Auth', 'TailwindCSS', 'shadcn/ui', 'UploadThing', 'Recharts', 'react-hook-form', 'Zod'],
       url: 'https://campus-complaint-portal-q8q7.vercel.app/',
-      image: '/Screenshot 2026-03-08 233632.png'
+      image: '/campus.png'
     },
     {
       name: 'ML4E Official Website',
@@ -107,7 +92,7 @@ const About = () => {
   const duplicatedTechs = [...techStacks, ...techStacks, ...techStacks];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6 lg:p-12 overflow-hidden relative" style={{ fontFamily: "'Shantell Sans', cursive" }}>
+    <div id="about" className="min-h-screen bg-[url('/bg.png')] bg-cover bg-center bg-fixed p-6 lg:p-12 overflow-hidden relative" style={{ fontFamily: "'Young Serif', sans-serif" }}>
      
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(209,255,102,0.15),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(163,255,204,0.15),transparent_50%)]"></div>
@@ -132,78 +117,48 @@ const About = () => {
         }
       `}</style>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto">
-       
-        <section className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent tracking-tight">
-            About Me
-          </h1>
-        </section>
+      <div className="relative z-10 w-full mx-auto">
+        
+        <div className="bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 lg:p-16 mb-16 shadow-2xl relative w-full flex flex-col justify-center items-center" style={{ fontFamily: "'Young Serif', sans-serif", minHeight: "80vh" }}>
+          
+          <div className="flex justify-center items-center mb-12 relative w-fit mx-auto">
+            <svg viewBox="0 0 100 100" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="absolute -left-12 -bottom-2 w-16 h-16 md:-left-20 md:-bottom-4 md:w-24 md:h-24">
+              <path d="M80,20 C95,5 105,30 90,40 C70,55 60,30 75,20 C90,8 65,30 50,55 C40,70 30,85 20,95" />
+              <path d="M20,95 L20,75 M20,95 L40,90" />
+            </svg>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-widest text-white uppercase">
+              ABOUT ME
+            </h1>
+          </div>
 
-      
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-center">
-         
-          <section className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-[2.5rem] p-10 lg:p-14 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 flex items-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-            <div>
-              <p className="text-lg text-blue-100 leading-relaxed font-medium">
-                I'm an aspiring Frontend Engineer and B.Tech student, graduating in 2028, currently exploring the dynamic world of full-stack web development. I've built a solid foundation in software development, data structures, and modern frontend technologies like React, Tailwind CSS, and GSAP. I'm actively expanding my skills through projects and problem-solving, with a strong interest in participating in hackathons and collaborative tech challenges. Eager to learn, build, and grow, I'm passionate about crafting intuitive and engaging user experiences while continuously exploring the ever-evolving web ecosystem.
+          <div className="flex flex-col md:flex-row gap-10 lg:gap-16 items-center md:items-start max-w-5xl mx-auto w-full">
+            
+            <div className="bg-[#FAF7ED] text-[#1681a5] p-5 lg:p-6 w-72 md:w-80 flex-shrink-0 shadow-xl rounded-[20px] transform -rotate-2">
+              <div className="rounded-[10px] overflow-hidden mb-4 shadow-sm" style={{ padding: "4px", backgroundColor: "#FAF7ED" }}>
+                <img src="/bismay.jpg" alt="Bismay" className="w-[95%] mx-auto h-auto aspect-square object-cover rounded-md" />
+              </div>
+              <div className="text-left font-bold text-xl md:text-2xl leading-tight px-1">
+                Bismay<br />
+                <span className="font-medium text-[1.1rem]">Aspiring Software Engineer</span><br />
+                <span className="font-medium text-[1.1rem]">Full-Stack Developer</span>
+              </div>
+            </div>
+
+            <div className="flex-1 text-white text-lg lg:text-xl font-medium leading-relaxed space-y-6 pt-2 text-justify md:text-left">
+              <p>
+                Hello, I am Bismay, an aspiring Software Engineer with expertise in full-stack development. I have a strong foundation in software development, data structures, algorithms, and competitive programming. 
+              </p>
+              <p>
+                I'm skilled in modern technologies like Next.js for both frontend and backend development. Currently, I am exploring Machine Learning, Deep Learning, and Web3 technologies to expand my skill set and stay updated with industry trends.
+              </p>
+              <p>
+                Passionate about solving challenging problems through projects and collaborative initiatives. My goal is to create scalable digital experiences, delivering innovative and impactful solutions while growing.
               </p>
             </div>
-          </section>
-
-        
-        <section
-  className={`bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-[2.5rem] p-8 transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 ${
-    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-  }`}
-  style={{ animationDelay: '0.3s' }}
->
-  <div className="flex items-center justify-center h-full">
-    <div className="relative w-72 h-72">
-
-    
-      <div
-        className="absolute top-50 left-60 w-44 h-44 overflow-hidden shadow-2xl group transition-transform duration-300"
-        style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }}
-      >
-        <div
-          className="w-full h-full scale-150"
-          style={{ transform: 'rotate(-45deg)' }}
-        >
-          <img
-            src="/me.jpeg"
-            alt="Back Diamond"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
-      </div>
-
-     
-      <div
-        className="absolute top-30 left-10 w-44 h-44 overflow-hidden shadow-2xl group z-20 transition-transform duration-300 hover:scale-105"
-        style={{ transform: 'translate(-40%, -40%) rotate(45deg)' }}
-      >
-        <div
-          className="w-full h-full scale-150"
-          style={{ transform: 'rotate(-45deg)' }}
-        >
-          <img
-            src="/bismay.jpg"
-            alt="Front Diamond"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-transparent"></div>
-      </div>
-
-    </div>
-  </div>
-</section>
+          </div>
         </div>
 
-       
-        <section className={`mb-8 bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl rounded-3xl p-6 transition-all duration-500 transform shadow-2xl hover:shadow-indigo-500/20 overflow-hidden ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+        <section className={`mb-8 bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-xl rounded-3xl p-6 transition-all duration-500 transform shadow-2xl hover:shadow-indigo-500/20 overflow-hidden mt-16 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
           <div className="flex items-center mb-6">
            
             <h2 className="text-2xl font-bold text-white">Tech Stack</h2>
@@ -237,7 +192,7 @@ const About = () => {
         </section>
 
        
-        <section id="projects" className={`relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-xl transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.5s' }}>
+        <section id="projects" className={`relative overflow-hidden rounded-3xl p-6 bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-xl transition-all duration-500 transform shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.5s' }}>
           <div className="flex items-center mb-6">
            
             <h2 className="text-2xl font-bold text-white">Featured Projects</h2>
@@ -246,7 +201,7 @@ const About = () => {
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="relative rounded-2xl overflow-hidden transition-all duration-300 bg-gradient-to-br from-slate-800/50 to-blue-900/50 p-5 group hover:scale-[1.02]"
+                className="relative rounded-2xl overflow-hidden transition-all duration-300 bg-[url('/bg.png')] bg-cover bg-center bg-fixed p-5 group hover:scale-[1.02]"
               >
                
                 <div className="mb-4">
@@ -283,7 +238,7 @@ const About = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block w-fit px-5 py-2 text-sm rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold hover:scale-105 transition shadow-lg hover:shadow-blue-500/50"
+                    className="inline-block w-fit px-5 py-2 text-sm rounded-xl bg-[#2c6f99] text-white font-semibold hover:scale-105 hover:bg-[#1f506e] transition shadow-lg"
                   >
                     View Project →
                   </a>

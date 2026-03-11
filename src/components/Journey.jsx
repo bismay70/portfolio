@@ -47,9 +47,9 @@ export default function Journey() {
   });
 
   return (
-    <section id="journey" className="py-20 px-6 bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 min-h-screen">
+    <section id="journey" className="py-20 px-6 bg-[url('/bg.png')] bg-cover bg-center bg-fixed min-h-screen">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
       `}</style>
       
       <motion.h2
@@ -58,7 +58,7 @@ export default function Journey() {
         animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 80 }}
         transition={{ type: "spring", stiffness: 50, damping: 20 }}
         className="text-5xl md:text-6xl font-bold text-center mb-20 text-white"
-        style={{ fontFamily: "'Shantell Sans', cursive" }}
+        style={{ fontFamily: "'Young Serif', serif" }}
       >
         My Journey
       </motion.h2>
@@ -81,7 +81,7 @@ export default function Journey() {
                 <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
                   <motion.div
                     ref={cardRef}
-                    className="bg-gradient-to-br from-slate-900/80 via-blue-900/60 to-slate-900/80 backdrop-blur-sm rounded-xl shadow-2xl border border-blue-500/30 hover:border-blue-400/50 hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden"
+                    className="bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-sm rounded-xl shadow-2xl border border-blue-500/30 hover:border-blue-400/50 hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden"
                     variants={cardVariants(index)}
                     initial="hidden"
                     animate={isCardInView ? "visible" : "hidden"}

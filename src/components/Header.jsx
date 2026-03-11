@@ -17,8 +17,8 @@ const toggleMenu = () => {
   const closeContactForm = () => setContactFormOpen(false);
 
   return (
-   <header className='absolute w-full z-50 transition-all duration-300' style={{ fontFamily: "'Shantell Sans', cursive" }}>
-        <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+   <header className='absolute w-full z-50 transition-all duration-300' style={{ fontFamily: "'Young Serif', serif" }}>
+        <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap" rel="stylesheet" />
         
         <div className='container mx:auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20'>
             <motion.div 
@@ -36,13 +36,13 @@ const toggleMenu = () => {
                 <div className=' flex items-center justify-center text-blue-700 font-bold text-2xl mr-3'>
                     B
                 </div>
-                <span className='text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent'>
+                <span className='text-xl font-bold text-[#2c6f99]'>
                     bsamay
                 </span>
             </motion.div>
 
         <nav className='lg:flex hidden space-x-8'>
-  {['Home', 'About', 'Portfolio','Projects','Education'].map((item, index) => (
+  {['Home', 'About', 'Projects','Education'].map((item, index) => (
     <motion.a 
       key={index}
       initial={{ opacity: 0, y: -20 }}
@@ -53,8 +53,8 @@ const toggleMenu = () => {
           damping: 20,
           delay: 0.7 + index * 0.2,
       }}
-      className='relative text-gray-800 dark:text-gray-200 hover:blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 group'
-      href={item === "Education" ? "/journey" : `#${item.toLowerCase()}`} // Only Education goes to new page
+      className='relative text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 group'
+      href={item === "Education" ? "/journey" : `/#${item.toLowerCase()}`}
     >
       {item}
       <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-200 group-hover:w-full transition-all duration-300'></span>
@@ -97,7 +97,7 @@ const toggleMenu = () => {
                     delay: 1.6,
                     duration: 0.8,
                 }}
-                className='ml-4 px-8 py-2 rounded-xl bg-gradient-to-r from-blue-400 to-blue-500 bg-blue-600 text-blue font-bold hover:from-blue-700 hover:to-blue-700 hover:text-white transition-all duration-500 '>
+                className='ml-4 px-8 py-2 rounded-xl bg-[#2c6f99] text-white font-bold hover:bg-[#1f506e] transition-all duration-500 '>
                     Contact
                 </motion.button>
                 </div>
@@ -119,12 +119,12 @@ const toggleMenu = () => {
                 transition={{duration: 0.5}}
               className="md:hidden overflow-hodden bg-white dark:bg-gray-800 shadow-lg px-4 py-5 space-y-5">
            <nav className="flex flex-col space-y-3">
-  {["Home", "About", "Portfolio","Projects","Education"].map((item) => (
+  {["Home", "About", "Projects","Education"].map((item) => (
     <a 
       key={item} 
       onClick={toggleMenu} 
       className="text-gray-300 font-medium py-2 block"
-      href={item === "Education" ? "/journey" : `#${item.toLowerCase()}`} // Only Education → new page
+      href={item === "Education" ? "/journey" : `/#${item.toLowerCase()}`}
     >
       {item}
     </a>
@@ -147,7 +147,7 @@ const toggleMenu = () => {
                         toggleMenu()
                         openContactForm()
                     }}
-                     className='mt-4 block w-full px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 font-bold'>Contact</button>
+                     className='mt-4 block w-full px-4 py-2 rounded-lg bg-[#2c6f99] text-white hover:bg-[#1f506e] transition-all font-bold'>Contact</button>
                 </div>
 
              </motion.div>
@@ -212,7 +212,7 @@ const toggleMenu = () => {
                                e.preventDefault();
                                console.log('Form submitted');
                              }}
-                             className='w-full px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 text-white font-bold hover:from-blue-700 hover:to-blue-700 transition-all duration-300'>
+                             className='w-full px-4 py-2 rounded-lg bg-[#2c6f99] text-white font-bold hover:bg-[#1f506e] transition-all duration-300'>
                                 Send Message
                              </motion.button>
                             
