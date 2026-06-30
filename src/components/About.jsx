@@ -51,6 +51,20 @@ const About = () => {
   ];
 
   const projects = [
+     {
+      name: 'ResQ',
+      description: 'A next-generation AI-powered emergency response platform to detect and respond to multiple real-world hazards. Integrates fire, security, medical, and disaster monitoring via YOLOv8 AI, live routing, and smart dashboards.',
+      techStack: ['React', 'Node.js', 'PostgreSQL', 'YOLOv8', 'WebSockets'],
+      url: 'https://emergency-alert-system-seven.vercel.app/',
+      image: '/ResQ.png'
+    },
+    {
+      name: 'Sehath Care',
+      description: 'A modern, full-stack healthcare management system to streamline hospital operations. Features a smart doctor portal, AI prescription suggestions, voice-enabled registration, and an advanced AI/NLP knowledge graph.',
+      techStack: ['React', 'Node.js', 'Python', 'MongoDB', 'Docker', 'MCP Server'],
+      url: 'https://sethath-care.vercel.app/',
+      image: '/sehathcare.png'
+    },
     {
       name: 'Pokiverse',
   description: 'A Pokémon-themed mini-game hub featuring PokeLudo, PokeCrush, Hangman, and Memorite with modular React architecture, smooth animations, and dynamic Pokémon data integration.',
@@ -86,6 +100,7 @@ const About = () => {
       url: 'https://dictionary-app-sigma-ecru.vercel.app/',
       image: '/dictionary.png'
     }
+   
   ];
 
  
@@ -105,11 +120,11 @@ const About = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100% / 3));
+            transform: translateX(-50%);
           }
         }
         .animate-scroll {
-          animation: scroll 35s linear infinite;
+          animation: scroll 15s linear infinite;
           width: max-content;
         }
         .animate-scroll:hover {
@@ -158,35 +173,78 @@ const About = () => {
           </div>
         </div>
 
-        <section className={`mb-8 bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-xl rounded-3xl p-6 transition-all duration-500 transform shadow-2xl hover:shadow-indigo-500/20 overflow-hidden mt-16 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-          <div className="flex items-center mb-6">
-           
-            <h2 className="text-2xl font-bold text-white">Tech Stack</h2>
+        <section className={`mb-8 bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-xl rounded-3xl p-6 transition-all duration-500 transform shadow-2xl hover:shadow-indigo-500/20 mt-16 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+          <div className="flex items-center mb-8">
+            <h2 className="text-3xl font-bold text-white tracking-wide">Tech Stack</h2>
           </div>
           
-          <div 
-            className="relative overflow-hidden"
-            style={{ 
-              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', 
-              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' 
-            }}
-          >
-            <div className="flex animate-scroll w-max">
-              {duplicatedTechs.map((tech, index) => (
-                <a
-                  key={`${tech.name}-${index}`}
-                  href={tech.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${tech.color} rounded-2xl p-4 border hover:border-white/30 transition-all duration-300 hover:scale-110 cursor-pointer group shadow-lg hover:shadow-xl flex-shrink-0 mx-3`}
-                  style={{ width: '140px' }}
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <img src={tech.icon} alt={tech.name} className="w-12 h-12 mb-2 group-hover:scale-110 transition-transform duration-200"/>
-                    <span className="text-white text-sm font-medium">{tech.name}</span>
-                  </div>
-                </a>
-              ))}
+          <div className="flex flex-col gap-8">
+            {/* Languages & AI */}
+            <div className="bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-md rounded-2xl p-6 border border-white/5 shadow-inner">
+              <h3 className="text-xl text-gray-200 font-bold mb-6 flex items-center">
+                <span className="w-2 h-2 rounded-full bg-gray-500 mr-3"></span>
+                Languages & AI/ML
+              </h3>
+              <div 
+                className="relative overflow-hidden w-full"
+                style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
+              >
+                <div className="flex animate-scroll w-max gap-4" style={{ animationDirection: 'reverse' }}>
+                  <img src="https://skillicons.dev/icons?i=javascript,typescript,python,solidity,tensorflow,opencv,scikitlearn,pandas,langchain&theme=dark" alt="Languages & AI" className="h-16" />
+                  <img src="https://skillicons.dev/icons?i=javascript,typescript,python,solidity,tensorflow,opencv,scikitlearn,pandas,langchain&theme=dark" alt="Languages & AI" className="h-16" />
+                </div>
+              </div>
+            </div>
+
+            {/* Frontend & Design */}
+            <div className="bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-md rounded-2xl p-6 border border-white/5 shadow-inner">
+              <h3 className="text-xl text-gray-200 font-bold mb-6 flex items-center">
+                <span className="w-2 h-2 rounded-full bg-gray-500 mr-3"></span>
+                Frontend & Design
+              </h3>
+              <div 
+                className="relative overflow-hidden w-full"
+                style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
+              >
+                <div className="flex animate-scroll w-max gap-4">
+                  <img src="https://skillicons.dev/icons?i=html,css,tailwind,react,nextjs,figma&theme=dark" alt="Frontend & Design" className="h-16" />
+                  <img src="https://skillicons.dev/icons?i=html,css,tailwind,react,nextjs,figma&theme=dark" alt="Frontend & Design" className="h-16" />
+                </div>
+              </div>
+            </div>
+
+            {/* Backend & Databases */}
+            <div className="bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-md rounded-2xl p-6 border border-white/5 shadow-inner">
+              <h3 className="text-xl text-gray-200 font-bold mb-6 flex items-center">
+                <span className="w-2 h-2 rounded-full bg-gray-500 mr-3"></span>
+                Backend & Databases
+              </h3>
+              <div 
+                className="relative overflow-hidden w-full"
+                style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
+              >
+                <div className="flex animate-scroll w-max gap-4" style={{ animationDirection: 'reverse' }}>
+                  <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,django,flask,fastapi,graphql,mysql,postgresql,mongodb,firebase,supabase,prisma&theme=dark" alt="Backend & Databases" className="h-16" />
+                  <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,django,flask,fastapi,graphql,mysql,postgresql,mongodb,firebase,supabase,prisma&theme=dark" alt="Backend & Databases" className="h-16" />
+                </div>
+              </div>
+            </div>
+
+            {/* Tools & Cloud */}
+            <div className="bg-[url('/bg.png')] bg-cover bg-center bg-fixed backdrop-blur-md rounded-2xl p-6 border border-white/5 shadow-inner">
+              <h3 className="text-xl text-gray-200 font-bold mb-6 flex items-center">
+                <span className="w-2 h-2 rounded-full bg-gray-500 mr-3"></span>
+                Tools & DevOps
+              </h3>
+              <div 
+                className="relative overflow-hidden w-full"
+                style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
+              >
+                <div className="flex animate-scroll w-max gap-4">
+                  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,gcp,linux,git,github,gitlab,postman&theme=dark" alt="Tools & Cloud" className="h-16" />
+                  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,gcp,linux,git,github,gitlab,postman&theme=dark" alt="Tools & Cloud" className="h-16" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
